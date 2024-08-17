@@ -5,7 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 const Admin = () => {
     return (
         <div className='flex '>
-            <div className='w-80 h-[100vh] bg-blue-400'>
+            <div className='w-80 h-[100vh] bg-[yellowgreen]'>
                 <h2>Admin</h2>
                 <ul>
                     <li>

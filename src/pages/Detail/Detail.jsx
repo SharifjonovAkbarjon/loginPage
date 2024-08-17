@@ -18,9 +18,13 @@ const Detail = () => {
 
     }, [])
 
-    
+
+
 
     return (
+
+        
+
 
         <>
             <div className='container flex items-center mt-[50px]'>
@@ -40,17 +44,17 @@ const Detail = () => {
                     <p className='text-blue-950 font-medium'>Percentage: {data?.discountPercentage} %</p>
                     <div>
                         <p className='text-yellow-500 font-medium'>Price: {data?.price} $</p>
-                    </div>  
+                    </div>
                     <div className='flex flex-col '>
                         <div className='border-t-slate-600 '>
                             <hr />
                             <p className='py-[5px] cursor-pointer'>Цвет: Черный</p>
-                        </div>                 
+                        </div>
                         <div className='border-t-slate-600 '>
                             <hr />
                             <p className='py-[5px] cursor-pointer'>Подробнее о товаре</p>
                             <hr />
-                        </div>                 
+                        </div>
                     </div>
                     <div>
                         <button className='px-[100px] py-[16px] bg-[rgb(255,138,30)] rounded-[32px] cursor-pointer text-white mt-3'>Добаить в корзину</button>
