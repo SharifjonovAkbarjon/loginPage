@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import cart from '../../assets/cart.png'
+import axios from '../../api'
 import { Link } from 'react-router-dom'
 
 const API_URL = "https://dummyjson.com"
@@ -30,7 +30,7 @@ const Product = () => {
 
     useEffect(() => {
         axios
-            .get(`${API_URL}/products/category-list`)
+            .get(`products/category-list`)
             .then(res => setCategories(res.data))
             .catch(err => console.log(err))
     }, [])
@@ -39,7 +39,7 @@ const Product = () => {
     useEffect(() => {
         setLoading(true)
         axios
-            .get(`${API_URL}/products${selectCategory}`, {
+            .get(`products${selectCategory}`, {
                 params: {
                     limit: 4 * ofset
                 }
@@ -54,7 +54,6 @@ const Product = () => {
     }, [ofset, selectCategory])
 
 
-    console.log(products);
     const productItem = products?.map((product) => (
         <div key={product.id} className='hover:cursor-pointer  group relative overflow-hidden md:w-[48%] lg:w-[23%] mt-7 p-4 border-zinc-200	 flex flex-col items-center'>
             <Link to={`/product/${product.id}`}>

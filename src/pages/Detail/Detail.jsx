@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
-import axios from 'axios'
-const API_URL = "https://dummyjson.com"
+import axios from '../../api'
 
 
 
@@ -12,7 +11,7 @@ const Detail = () => {
 
     useEffect(() => {
         axios
-            .get(`${API_URL}/products/${id}`)
+            .get(`products/${id}`)
             .then(res => seData(res.data))
             .catch(err => console.log(err))
 

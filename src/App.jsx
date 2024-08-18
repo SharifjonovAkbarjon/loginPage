@@ -13,6 +13,7 @@ import Admin from './pages/Admin/Admin'
 import CreateProduct from './pages/Admin/CreateProduct'
 import Manage from './pages/Admin/Manage'
 import Login from './pages/Login/Login'
+import Ayth from './pages/auth/Ayth'
 
 
 function App() {
@@ -29,9 +30,11 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="*" element={<Uslobiya />} />
         <Route path="/product/:id" element={<Detail />} />
-        <Route path="/admin" element={<Admin />}>
-          <Route path="create" element={<CreateProduct/>}/>
-          <Route path="manage" element={<Manage/>}/>
+        <Route path="/" element={<Ayth />}>
+          <Route path="admin" element={<Admin />}>
+            <Route path="create" element={<CreateProduct />} />
+            <Route path="manage" element={<Manage />} />
+          </Route>
         </Route>
 
       </Routes>
